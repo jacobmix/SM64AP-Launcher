@@ -45,14 +45,14 @@ class BuildConfigurator : public QWidget {
         QPushButton target_directory_button{"Browse...", this};
         QLabel target_directory_button_label{"Select Target Directory", this};
         QLabel target_directory_selected_label{"⟶ Currently none selected", this};
-        QLineEdit name_select{"", this};
+        QLineEdit name_select{"SM64AP", this};
         QLabel name_select_label{"Name for this build", this};
         QPushButton download_files{"Download Files", this};
         QLabel download_files_label{"Confirm Repo and Branch\nand start downloading the files", this};
         OutputWidget subprocess_output{this};
         QComboBox region_select{this};
         QLabel region_select_label{"Region",this};
-        QLineEdit make_flags{"-j8",this};
+        QLineEdit make_flags{"-j8 EXTERNAL_DATA=1 WINDOWS_CONSOLE=1 BETTERCAMERA=1 NODRAWINGDISTANCE=1 TEXTURE_FIX=1",this};
         QLabel make_flags_label{"Make Flags",this};
         QPushButton apply_patches{"Apply Patches",this};
         QPushButton start_compile{"Create Build", this};
